@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>अब काम नहीं, इतिहास शुरू हो रहा है</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff5f5, #ffecec);
+      padding: 40px 10px;
+    }
+
+    .main-box {
+      background: #fef2f2;
+      border-left: 8px solid #991b1b;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(153, 27, 27, 0.2);
+      max-width: 600px;
+      width: 90%;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .main-box h1 {
+      color: #991b1b;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .main-box p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #991b1b;
+      margin-top: 20px;
+    }
+
+    .work-check-box {
+      background-color: #fef2f2;
+      border-left: 6px solid #00ff00;
+      padding: 20px 25px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(153, 27, 27, 0.2);
+      margin: 20px auto;
+    }
+
+    .work-check-box .work-question {
+      font-size: 1.3rem;
+      color: #991b1b;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .work-check-box .checkbox-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .work-check-box .checkbox-group label {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .work-check-box .signature {
+      margin-top: 20px;
+      text-align: right;
+      color: #991b1b;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .main-box h1 {
+        font-size: 1.5rem;
+      }
+    }
+    
+.work-write-box {
+  background-color: #f2f9f2; /* halka green shade */
+  border-left: 6px solid #15803d; /* dark green border */
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(21, 128, 61, 0.2);
+  margin: 20px auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.work-write-box .work-question {
+  font-size: 1.3rem;
+  color: #15803d;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.work-write-box .work-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Baloo 2', cursive;
+}
+
+.work-write-box .signature {
+  margin-top: 20px;
+  text-align: right;
+  color: #15803d;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.team-box {
+  background-color: #e0f2fe; /* light blue background */
+  border-left: 6px solid #0284c7; /* strong blue border */
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(2, 132, 199, 0.15);
+  margin: 20px auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.team-box .team-title {
+  font-size: 1.3rem;
+  color: #0284c7;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.team-box .team-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Baloo 2', cursive;
+}
+
+.team-box .example-line {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.team-box .signature {
+  margin-top: 20px;
+  text-align: right;
+  color: #0284c7;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.leave-box {
+  background-color: #f5f3ff; /* lavender background */
+  border-left: 6px solid #7c3aed; /* purple border */
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.1);
+  margin: 20px auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.leave-box .leave-title {
+  font-size: 1.3rem;
+  color: #7c3aed;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.leave-box .leave-input,
+.leave-box .leave-date,
+.leave-box .leave-reason {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 15px;
+  font-family: 'Baloo 2', cursive;
+}
+
+.leave-box .leave-dates {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.leave-box .signature {
+  margin-top: 20px;
+  text-align: right;
+  color: #7c3aed;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.wallet-box {
+  background-color: #f0f9ff;
+  border-left: 6px solid #0ea5e9;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.15);
+  margin: 20px auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.wallet-title {
+  font-size: 1.3rem;
+  color: #0ea5e9;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.wallet-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 10px;
+  font-family: 'Baloo 2', cursive;
+}
+
+.unlock-btn {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.wallet-data p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.wallet-box .signature {
+  margin-top: 20px;
+  text-align: right;
+  color: #0ea5e9;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.send-details-box {
+  background: #fff7f7;
+  padding: 20px;
+  border-left: 6px solid #d92d2d;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(217, 45, 45, 0.1);
+}
+
+.box-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b32020;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #d92d2d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #b32020;
+}
+
+.signature {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #b32020;
+  text-align: right;
+}
+
+#submitStatus {
+  margin-top: 10px;
+  color: green;
+  display: none;
+}
+
+.matdan-box {
+  background-color: #fff1f2;
+  border-left: 6px solid #db2777;
+  padding: 25px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: 0 0 15px rgba(219, 39, 119, 0.15);
+  margin: 20px auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.matdan-box .matdan-title {
+  font-size: 1.4rem;
+  color: #db2777;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.matdan-box .matdan-message {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.matdan-box .matdan-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  font-family: 'Baloo 2', cursive;
+}
+
+.matdan-box .signature {
+  margin-top: 20px;
+  text-align: right;
+  color: #db2777;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.logo-container {
+  text-align: center;
+  margin: 40px auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.dk-title {
+  font-size: 4rem;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.dk-title .letter {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.light-d, .light-k {
+  animation: legitWave 2s infinite ease-in-out;
+}
+
+.light-k {
+  animation-delay: 0.3s;
+}
+
+.dk-title .bindi {
+  position: absolute;
+  top: -10px;
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: blink 1s infinite alternate;
+  box-shadow: 0 0 10px #fff;
+}
+
+@keyframes legitWave {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff9e9e, 0 0 20px #ff3b3b;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #ff3b3b;
+    transform: scale(1.05);
+  }
+}
+
+.community-title {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.community-title span {
+  color: #0ea5e9;
+  text-shadow: 0 0 5px #0ea5e9;
+  animation: waveLight 2s infinite ease-in-out;
+}
+
+.community-title span:nth-child(1) { animation-delay: 0s; }
+.community-title span:nth-child(2) { animation-delay: 0.2s; }
+.community-title span:nth-child(3) { animation-delay: 0.4s; }
+.community-title span:nth-child(4) { animation-delay: 0.6s; }
+.community-title span:nth-child(5) { animation-delay: 0.8s; }
+.community-title span:nth-child(6) { animation-delay: 1s; }
+.community-title span:nth-child(7) { animation-delay: 1.2s; }
+.community-title span:nth-child(8) { animation-delay: 1.4s; }
+.community-title span:nth-child(9) { animation-delay: 1.6s; }
+
+@keyframes blink {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.3; transform: scale(1.5); }
+}
+
+@keyframes waveLight {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-5px); }
+}
+  </style>
+</head>
+<body>
+<div class="logo-container">
+  <h1 class="dk-title">
+    <span class="letter light-d">D</span><span class="letter light-k">K</span>
+    <span class="bindi"></span>
+  </h1>
+  <h2 class="community-title">
+    <span>C</span><span>o</span><span>m</span><span>m</span><span>u</span><span>n</span><span>i</span><span>t</span><span>y</span>
+  </h2>
+</div>
+
+<!-- Title Box -->
+<div class="main-box">
+  <h1 id="titleText">अब काम नहीं, इतिहास शुरू हो रहा है</h1>
+  <p id="motivationText">जो यहाँ रुकेगा, वही इस दुनिया में दिखेगा।</p>
+  <div class="signature">— Deepak Chauhan × AI Bhai</div>
+</div>
+
+<div class="work-check-box">
+  <label class="work-question">क्या आपने आज काम किया?</label>
+  <div class="checkbox-group">
+    <label><input type="radio" name="workdone1" value="हाँ"> हाँ</label>
+    <label><input type="radio" name="workdone1" value="नहीं"> नहीं</label>
+  </div>
+
+  <button onclick="submitWork()">📤 भेजें</button>
+  <p id="statusMsg1" style="color: green; margin-top: 10px; display: none;"></p>
+
+  <div class="signature">— Deepak Chauhan × AI Bhai</div>
+</div>
+
+
+<div class="work-write-box">
+  <label class="work-question">✍️ आज आपने क्या सीखा या किया? (लिखिए)</label>
+  <input type="text" class="work-input" id="msgInput" placeholder="अपना उत्तर यहाँ लिखें..." />
+  
+  <button onclick="submitWork()">📤 भेजें</button>
+  <p id="msgStatus" style="margin-top: 10px; color: green; display: none;">⏳ भेजा जा रहा है...</p>
+
+  <div class="signature">— Deepak Chauhan × AI Bhai</div>
+</div>
+
+
+<!-- 🚀 Team Box -->
+<div class="team-box">
+  <label class="team-title" id="teamTitle">🚀 लोड हो रहा है...</label>
+
+  <input type="text" class="team-input" id="teamInput" placeholder="आपने कितने लोगों को टीम में शामिल किया? नाम/संख्या लिखें...">
+  <p class="example-line">उदाहरण: 5 लोग – राहुल, पूजा, आदित्य, नेहा, समीर</p>
+  
+  <button class="send-button" onclick="sendTeamMessage()">📤 Send</button>
+  <p id="sendStatus" style="margin-top: 10px; color: green; display: none;">📡 आपका मैसेज भेजा जा रहा है...</p>
+  
+  <div class="signature">— Deepak Chauhan × AI Bhai 🧠</div>
+</div>
+
+
+<div class="leave-box">
+  <label class="leave-title">📝 छुट्टी के लिए आवेदन पत्र</label>
+
+  <input type="text" id="leaveName" class="leave-input" placeholder="अपना नाम लिखें..." />
+
+  <div class="leave-dates">
+    <input type="date" class="leave-date" id="leaveFrom" /> से
+    <input type="date" class="leave-date" id="leaveTo" />
+  </div>
+
+  <textarea class="leave-reason" id="leaveReason" rows="3" placeholder="छुट्टी का कारण लिखें..."></textarea>
+
+  <button onclick="submitLeave()">📤 आवेदन भेजें</button>
+  <p id="leaveStatus" style="color: green; margin-top: 10px; display: none;">📡 आपका आवेदन भेजा जा रहा है...</p>
+
+  <div class="signature">— Deepak Chauhan × AI Bhai 🧠</div>
+</div>
+
+
+<div class="wallet-box" id="walletBox">
+  <label class="wallet-title">💼 Your Wallet (Work Amount)</label>
+
+  <div class="lock-section" id="walletLock">
+    <input type="password" id="walletPass" class="wallet-input" placeholder="🔒 Enter Code to Unlock..." />
+    <button onclick="unlockWallet()" class="unlock-btn">Unlock</button>
+  </div>
+
+  <div class="wallet-data" id="walletData" style="display:none;">
+    <p id="walletName">👤 नाम: </p>
+    <p id="walletAmount">💰 Wallet Monthly Amount: </p>
+    <p id="walletProcess">⚙️ Process Income: </p>
+    <p id="walletPending">⏳ Pending Income: </p>
+    <p id="walletIncrease">📈 Increase Payment: </p>
+    <p id="walletLevel" style="margin-top: 15px;">🎚️ आपका Level: </p>
+    <div class="signature">— Deepak Chauhan × AI Bhai</div>
+  </div>
+</div>
+
+<!-- ✅ Send Details Box -->
+ <div class="send-details-box">
+    <label class="box-title">📤 Send Details</label>
+
+    <input type="text" class="input-field" id="your_work_name" placeholder="Your Work Name" />
+    <input type="text" class="input-field" id="your_real_name" placeholder="Your Real Name" />
+    <input type="text" class="input-field" id="bank_details" placeholder="Bank Details (Bank name, A/C no., IFSC)" />
+    <input type="text" class="input-field" id="all_upi" placeholder="UPI / PhonePe / GPay / Paytm ID" />
+    <input type="text" class="input-field" id="whatsapp_number" placeholder="WhatsApp Number" />
+    <input type="text" class="input-field" id="any_website" placeholder="आप किस वेबसाइट पर कार्य करते हैं?" />
+    <input type="text" class="input-field" id="work" placeholder="आप कौन सा कार्य करते हैं?" />
+
+    <button onclick="submitDetails()">📤 Submit</button>
+    <p id="submitStatus">📡 डिटेल भेजी जा रही है...</p>
+
+    <div class="signature">— Deepak Chauhan × AI Bhai</div>
+  </div>
+
+<!-- 🔰 Matdan Dil Se Box -->
+<div class="matdan-box">
+  <label class="matdan-title">🔰 Matdan Dil Se</label>
+
+  <p class="matdan-message" id="matdanMessage">
+    DK Community में दान करो — लेकिन दिल से ❤️<br>
+    लोगों तक पहुँचाना ही आपके वर्क की मेहनत और सपोर्ट होगा।<br>
+    Reply Again! टीम बढ़ेगा तभी कमाओगे।<br>
+    सपोर्ट मेरा हर वक्त साथ है 💪
+  </p>
+
+  <textarea class="matdan-textarea" id="matdanInput" rows="4" placeholder="कोई सलाह या सुझाव जो आप हमारी वेबसाइट में देखना चाहते हैं..."></textarea>
+
+  <button class="send-button" onclick="sendMatdanMessage()">📤 भेजें</button>
+  <p id="matdanStatus" style="margin-top: 10px; color: green; display: none;">📡 आपका मैसेज भेजा जा रहा है...</p>
+
+  <div class="signature">— Deepak Chauhan × AI Bhai</div>
+</div>
+<script src="script.js"></script>
+</body>
+      </html>
